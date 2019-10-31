@@ -1,0 +1,7 @@
+[alias]
+	graph = log --oneline --graph --decorate --color
+[user]
+	name = Chris Tierney
+	email = notproperlycut@gmail.com
+[pull]
+	rebase = true
