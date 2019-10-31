@@ -8,6 +8,7 @@
       create: true
     ~/.gitconfig:
     ~/.linky:
+    ~/.tmux.conf:
     ~/.vim:
     ~/.vimrc:
     ~/.zshrc:
