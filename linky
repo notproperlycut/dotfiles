@@ -1,0 +1,47 @@
+to() {
+	pushd $* > /dev/null
+}
+
+ot() {
+	popd $* > /dev/null
+}
+
+red() {
+	mkdir -p ~/linky
+	link=${1:-default}
+	ln -s `pwd` ~/linky/$link
+}
+
+rmd() {
+	link=${1:-default}
+	rm -f ~/linky/$link
+}
+
+cdd() {
+	link=${1:-default}
+	cd `readlink ~/linky/$link`
+}
+
+tod() {
+	link=${1:-default}
+	to `readlink ~/linky/$link`
+}
+
+pwdd() {
+	link=${1:-default}
+	readlink ~/linky/$link
+}
+
+lsd() {
+	for link in `ls ~/linky`
+	do
+		echo "[$link]" `readlink ~/linky/$link`
+	done
+}
+
+_lsd() {
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    COMPREPLY=( $(compgen -W "default `ls ~/linky`" -- $cur) )
+}
+
+complete -F _lsd red rmd cdd tod pwdd

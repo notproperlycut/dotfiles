@@ -33,6 +33,9 @@ zplug load
 setopt rmstarsilent
 bindkey -e
 
+autoload -U +X bashcompinit && bashcompinit
+source ~/.linky
+
 export PATH="${HOME}/bin:$PATH"
 export BYOBU_PREFIX=/usr/local
 export EDITOR='vim'
