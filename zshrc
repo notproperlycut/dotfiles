@@ -7,10 +7,6 @@ source ~/.zplug/init.zsh
 # Make sure to use double quotes
 zplug "zsh-users/zsh-history-substring-search"
 
-# Use the package as a command
-# And accept glob patterns (e.g., brace, wildcard, ...)
-zplug "notproperlycut/dotfiles", as:command, use:"bin/{tmpme}"
-
 zplug "plugins/git",   from:oh-my-zsh
 zplug "plugins/github",   from:oh-my-zsh
 zplug "plugins/brew",   from:oh-my-zsh

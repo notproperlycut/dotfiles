@@ -12,5 +12,5 @@ Bundles the amazing https://github.com/anishathalye/dotbot/ as a git submodule (
 
 Required:
 - homebrew
-- `brew install direnv asdf git hub`
+- `brew install coreutils direnv asdf git hub`
 - `zplug` from https://github.com/zplug/zplug
