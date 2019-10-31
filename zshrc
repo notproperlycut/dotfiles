@@ -17,9 +17,10 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug 'skywind3000/z.lua'
 
 # Load theme file
-#zplug 'dracula/zsh', as:theme
-zplug "mafredri/zsh-async", from:github
-zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
+#zplug "mafredri/zsh-async", from:github
+#zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
+zplug "themes/robbyrussell",   from:oh-my-zsh, as:theme
+#zplug "themes/sorin",   from:oh-my-zsh, as:theme
 
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
