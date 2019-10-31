@@ -1,0 +1,11 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/bin/:
+      path: bin/*
+      glob: true
+      create: true
+    ~/.vim:
+    ~/.vimrc:
+    ~/.zshrc:

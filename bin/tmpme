@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Usage: tmpme
+# Summary: Move to a temporary directory
+# Help: Create a temporary directory and drop me in it.
+# Copy any files supplied as arguments. Creates a new 
+# shell, must exit using: "exit-tmpme"
+mkdir -p $HOME/tmp
+tmpme=`gmktemp -d --tmpdir=$HOME/tmp XXXXXXXX`
+[ $1 ] && cp -r $* $tmpme
+cd $tmpme
+init="alias exit='echo \"exit disabled, type exit-tmpme instead\"' ; alias exit-tmpme='\exit' ; . ~/.bash_profile"
+bash --init-file <(echo $init)
+rm -rf $tmpme

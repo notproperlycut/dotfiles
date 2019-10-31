@@ -1,0 +1,24 @@
+#!/bin/bash
+set -e
+
+# Create a bare repo
+mkdir -p $1.git && pushd $1.git && git init --bare && popd
+
+# Clone the repo
+git clone $1.git $1
+pushd $1
+shift
+
+# Add some commits
+for i in $*
+do
+	touch $i
+	git add $i
+	git commit -m "Added $i"
+done
+
+# Push the master branch
+git push --set-upstream origin master
+
+# end
+popd

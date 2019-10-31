@@ -1,0 +1,24 @@
+#!/bin/bash
+set -e
+
+# Create a bare repo
+mkdir -p $1.svn && rmdir $1.svn
+svnadmin create $1.svn
+
+# Clone the repo
+svn checkout file://`pwd`/$1.svn $1
+pushd $1
+shift
+
+# Add some commits
+for i in $*
+do
+	touch $i
+	svn add $i
+	svn commit -m "Added $i"
+done
+svn up
+
+# end
+popd
+
