@@ -27,6 +27,7 @@ Plug 'nvie/vim-flake8'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'heavenshell/vim-prettier'
 Plug 'alampros/vim-styled-jsx'
+Plug 'dleonard0/pony-vim-syntax'
 
 " Plug 'ludovicchabant/vim-gutentags'
 let g:gutentags_cache_dir = '~/.tags_cache'
