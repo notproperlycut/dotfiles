@@ -47,4 +47,4 @@ export EDITOR='vim'
 # direnv
 eval "$(direnv hook zsh)"
 
-. /usr/local/opt/asdf/asdf.sh
+. $HOME/.asdf/asdf.sh
