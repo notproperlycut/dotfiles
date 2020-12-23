@@ -10,6 +10,7 @@ zplug "zsh-users/zsh-history-substring-search"
 zplug "plugins/git",   from:oh-my-zsh
 zplug "plugins/github",   from:oh-my-zsh
 zplug "plugins/brew",   from:oh-my-zsh
+zplug "plugins/ssh-agent",   from:oh-my-zsh
 
 zplug "kiurchv/asdf.plugin.zsh", defer:2
 
@@ -47,4 +48,6 @@ export EDITOR='vim'
 # direnv
 eval "$(direnv hook zsh)"
 
-. $HOME/.asdf/asdf.sh
+#. $HOME/.asdf/asdf.sh
+[[ /home/linuxbrew ]] && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+export PATH=~/.local/bin:$PATH

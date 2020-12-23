@@ -15,12 +15,17 @@ set expandtab
 set autoindent  
 set smartindent
 set copyindent
+set background=light
+colorscheme PaperColor
+
+" set clipboard=unnamedplus
+
+nnoremap <silent> <C-n> :set relativenumber!<cr>
 
 call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
 Plug 'sheerun/vim-polyglot'
-Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-sensible'
 Plug 'nvie/vim-flake8'

@@ -5,7 +5,7 @@
 # Copy any files supplied as arguments, delete them on exit.
 
 mkdir -p $HOME/tmp
-tmpme=`gmktemp -d --tmpdir=$HOME/tmp XXXXXXXX`
+tmpme=`mktemp -d --tmpdir=$HOME/tmp XXXXXXXX`
 [ $1 ] && cp -r $* $tmpme
 cd $tmpme
 $SHELL -i

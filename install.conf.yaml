@@ -2,6 +2,11 @@
 
 - link:
     ~/.dotfiles: ''
+    ~/.config/:
+      glob: true
+      path: config/*
+      relink: true
+      create: true
     ~/bin/:
       path: bin/*
       glob: true
