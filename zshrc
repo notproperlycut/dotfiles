@@ -56,6 +56,7 @@ export PATH=~/.local/bin:$PATH
 # To build erlang docs for iex
 export KERL_BUILD_DOCS="yes"
 
+type nvim &> /dev/null && alias vim="nvim"
 if type ~/bin/nvim/nvim.appimage > /dev/null 2>&1; then
   alias vim='~/bin/nvim/nvim.appimage'
 fi
