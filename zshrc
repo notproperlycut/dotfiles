@@ -51,3 +51,10 @@ eval "$(direnv hook zsh)"
 #. $HOME/.asdf/asdf.sh
 [[ /home/linuxbrew ]] && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 export PATH=~/.local/bin:$PATH
+
+# To build erlang docs for iex
+export KERL_BUILD_DOCS="yes"
+
+if type ~/bin/nvim/nvim.appimage > /dev/null 2>&1; then
+  alias vim='~/bin/nvim/nvim.appimage'
+fi
