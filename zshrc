@@ -49,7 +49,7 @@ export EDITOR='vim'
 eval "$(direnv hook zsh)"
 
 #. $HOME/.asdf/asdf.sh
-[[ /home/linuxbrew ]] && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+[[ -e /home/linuxbrew ]] && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 export PATH=~/.local/bin:$PATH
 
 # To build erlang docs for iex
