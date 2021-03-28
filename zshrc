@@ -50,6 +50,7 @@ eval "$(direnv hook zsh)"
 
 #. $HOME/.asdf/asdf.sh
 [[ -e /home/linuxbrew ]] && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+[[ -e $(brew --prefix asdf)/asdf.sh ]] && . $(brew --prefix asdf)/asdf.sh
 export PATH=~/.local/bin:$PATH
 
 # To build erlang docs for iex
